@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/bangers.spritefont</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Block.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Character.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Cloud.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/CorrectCloud.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Fire.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Platform.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
