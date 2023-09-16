@@ -58,7 +58,6 @@ namespace GameProject0
 
         public void Update(GameTime gameTime, GraphicsDevice graphics)
         {
-            
             _animationTimer += gameTime.ElapsedGameTime.TotalSeconds;
 
             if (_animationTimer > 0.1)
