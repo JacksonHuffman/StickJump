@@ -1,21 +1,21 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System.Reflection.Metadata.Ecma335;
+using GameProject0.Collisions;
 
 namespace GameProject0
 {
     public class StickJumpGame : Game
     {
+
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        private Texture2D _platformTexture;
-        private Vector2 _platformPosition;
-        private Vector2 _platformVelocity;
+        private PlatformSprite _platformSprite;
 
-        private Texture2D _stickTexture;
-        private Vector2 _stickPosition;
+        private StickSprite _stickSprite;
+
+        private BoomerangSprite _boomerangSprite;
 
         private Texture2D _blockTexture;
         private Vector2 _blockPosition;
@@ -38,10 +38,10 @@ namespace GameProject0
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            _platformPosition = new Vector2((GraphicsDevice.Viewport.Width - 128)/ 2, (GraphicsDevice.Viewport.Height - 128) / 2);
-            _platformVelocity = new Vector2((float)1, 0);
+            _platformSprite = new PlatformSprite(new Vector2((GraphicsDevice.Viewport.Width - 128) / 2, (GraphicsDevice.Viewport.Height - 128) / 2), new Vector2((float)1, 0));
+            _boomerangSprite = new BoomerangSprite(new Vector2(5, (GraphicsDevice.Viewport.Height / 2) - 190), new Vector2((float)1,0));
             _firePosition = new Vector2((GraphicsDevice.Viewport.Width / 2) - 128, (GraphicsDevice.Viewport.Height / 2) + 32);
-            _stickPosition = new Vector2((GraphicsDevice.Viewport.Width - 64) / 2, (GraphicsDevice.Viewport.Height - 335) / 2);
+            _stickSprite = new StickSprite(new Vector2((GraphicsDevice.Viewport.Width - 64) / 2, (GraphicsDevice.Viewport.Height - 335) / 2));
             _blockPosition = new Vector2(20, 275);
 
             base.Initialize();
@@ -52,9 +52,11 @@ namespace GameProject0
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            _platformTexture = Content.Load<Texture2D>("Platform");
+            //_platformTexture = Content.Load<Texture2D>("Platform");
             _fireTexture = Content.Load<Texture2D>("Fire");
-            _stickTexture = Content.Load<Texture2D>("Character");
+            _stickSprite.LoadContent(Content);
+            _platformSprite.LoadContent(Content);
+            _boomerangSprite.LoadContent(Content);
             _bangers = Content.Load<SpriteFont>("bangers");
             _blockTexture = Content.Load<Texture2D>("Block");
         }
@@ -68,11 +70,12 @@ namespace GameProject0
                 Exit();
 
             // TODO: Add your update logic here
-            _platformPosition += _platformVelocity * (float)gameTime.ElapsedGameTime.TotalSeconds * 100;
-
-            if (_platformPosition.X < GraphicsDevice.Viewport.X || _platformPosition.X + 128 > GraphicsDevice.Viewport.Width)
+            _stickSprite.Update(gameTime);
+            _platformSprite.Update(gameTime, GraphicsDevice);
+            _boomerangSprite.Update(gameTime, GraphicsDevice);
+            if(!_platformSprite.Bounds.CollidesWith(_stickSprite.Bounds))
             {
-                _platformVelocity.X *= -1;
+                _stickSprite.FallUpdate(gameTime);
             }
 
             if (currentKeyboardState.IsKeyDown(Keys.H) &&
@@ -80,6 +83,7 @@ namespace GameProject0
             {
                 this.Exit();
             }
+            
 
             base.Update(gameTime);
         }
@@ -90,9 +94,10 @@ namespace GameProject0
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            _spriteBatch.Draw(_platformTexture, _platformPosition, Color.White);
+            _platformSprite.Draw(gameTime, _spriteBatch);
+            _boomerangSprite.Draw(gameTime, _spriteBatch);
             _spriteBatch.Draw(_fireTexture, _firePosition, Color.White);
-            _spriteBatch.Draw(_stickTexture, _stickPosition, Color.White);
+            _stickSprite.Draw(gameTime, _spriteBatch);
             _spriteBatch.DrawString(_bangers, "StickJump!", new Vector2(20, 20), Color.Orange);
             _spriteBatch.DrawString(_bangers, "To Exit: Press The H Key!", new Vector2(520, 20), Color.Red);
             _spriteBatch.Draw(_blockTexture, _blockPosition, Color.White);
