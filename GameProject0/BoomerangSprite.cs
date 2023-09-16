@@ -38,6 +38,10 @@ namespace GameProject0
 
         private short _animationFrame;
 
+        private float _rotation;
+
+        public Vector2 Origin;
+
         public BoomerangSprite(Vector2 position, Vector2 velocity)
         {
             _position = position;
@@ -54,6 +58,30 @@ namespace GameProject0
 
         public void Update(GameTime gameTime, GraphicsDevice graphics)
         {
+            
+            _animationTimer += gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (_animationTimer > 0.1)
+            {
+                switch (Direction)
+                {
+                    case Direction.Right:
+                        Direction = Direction.Down;
+                        break;
+                    case Direction.Down:
+                        Direction = Direction.Left;
+                        break;
+                    case Direction.Left:
+                        Direction = Direction.Up;
+                        break;
+                    case Direction.Up:
+                        Direction = Direction.Right;
+                        break;
+                }
+                _animationTimer -= 0.1;
+            }
+            
+
             _position += _velocity * (float)gameTime.ElapsedGameTime.TotalSeconds * 100;
 
             if (_position.X < graphics.Viewport.X - 60 || _position.X + 85 > graphics.Viewport.Width)
@@ -64,7 +92,23 @@ namespace GameProject0
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_textureRight, _position, Color.White);
+            if(Direction == Direction.Right)
+            {
+                spriteBatch.Draw(_textureRight, _position, Color.White);
+            }
+            else if(Direction == Direction.Down)
+            {
+                spriteBatch.Draw(_textureDown, _position, Color.White);
+            }
+            else if(Direction == Direction.Left)
+            {
+                spriteBatch.Draw(_textureLeft, _position, Color.White);
+            }
+            else
+            {
+                spriteBatch.Draw(_textureUp, _position, Color.White);
+            }
+            //spriteBatch.Draw(_textureRight, _position, Color.White);
         }
     }
 }

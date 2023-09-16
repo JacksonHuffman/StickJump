@@ -44,5 +44,6 @@ C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\C
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Block.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\ball.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomRight.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomDown.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomLeft.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomUp.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomDown.xnb

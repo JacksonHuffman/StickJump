@@ -24,8 +24,6 @@ namespace GameProject0
 
         public BoundingRectangle Bounds => _bounds;
 
-        private KeyboardState currentKeyboardState;
-        private KeyboardState priorKeyboardState;
 
         public PlatformSprite(Vector2 position, Vector2 velocity)
         {
