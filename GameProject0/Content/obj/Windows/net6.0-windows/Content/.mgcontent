@@ -4,6 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Alligator.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/ball.jpg</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/bangers.spritefont</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Block.png</File>
@@ -15,9 +16,18 @@
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Cloud.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/CorrectCloud.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Fire.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/GameOverScreen.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Platform.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Portron Portron Lopez - Hiver Fou.mp3</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/StickJump.wav</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Swamp.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -47,3 +47,9 @@ C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\C
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomLeft.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomUp.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\BoomDown.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Alligator.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Swamp.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\GameOverScreen.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\StickJump.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Portron Portron Lopez - Hiver Fou.wma
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Portron Portron Lopez - Hiver Fou.xnb

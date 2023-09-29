@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GameProject0.Collisions;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -21,6 +22,8 @@ namespace GameProject0
 
         private BoundingRectangle _bounds;
 
+        private SoundEffect _stickJump;
+
         public BoundingRectangle Bounds => _bounds;
 
         private KeyboardState currentKeyboardState;
@@ -35,6 +38,7 @@ namespace GameProject0
         public void LoadContent(ContentManager content)
         {
             _texture = content.Load<Texture2D>("Character");
+            _stickJump = content.Load<SoundEffect>("StickJump");
         }
 
         public void Update(GameTime gameTime)
@@ -54,6 +58,7 @@ namespace GameProject0
             if ((currentKeyboardState.IsKeyDown(Keys.Space) && priorKeyboardState.IsKeyUp(Keys.Space)) || (currentKeyboardState.IsKeyDown(Keys.Up) && priorKeyboardState.IsKeyUp(Keys.Up)))
             {
                 _position += new Vector2(0, -100);
+                _stickJump.Play();
             }
 
             _bounds.X = _position.X;
