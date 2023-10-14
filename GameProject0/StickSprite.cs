@@ -77,7 +77,7 @@ namespace GameProject0
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            spriteBatch.Draw(_texture, _position, Color.Purple);
         }
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using GameProject0.Collisions;
 using GameProject0.Screens;
 using GameProject0.StateManagement;
+using GameProject0.ParticleSystemFolder;
 
 namespace GameProject0
 {
@@ -39,7 +40,7 @@ namespace GameProject0
 
         public void AddInitialScreens()
         {
-            _screenManager.AddScreen(new GamePlayScreen(), null);
+            _screenManager.AddScreen(new GamePlayScreen(this), null);
         }
 
         protected override void LoadContent()
@@ -67,7 +68,6 @@ namespace GameProject0
 
         protected override void Draw(GameTime gameTime)
         {
-            
             base.Draw(gameTime);
         }
     }

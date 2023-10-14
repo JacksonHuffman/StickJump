@@ -17,7 +17,7 @@ namespace GameProject0
 
         private Texture2D _texture;
 
-        private bool _flipped = true;
+        //private bool _flipped = true;
 
         private double _timer;
 
@@ -49,8 +49,8 @@ namespace GameProject0
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            SpriteEffects spriteEffects = (_flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
-            spriteBatch.Draw(_texture, _position, null, Color.White, 0, new Vector2(0, 0), 1, spriteEffects, 0);
+            //SpriteEffects spriteEffects = (_flipped) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+            spriteBatch.Draw(_texture, _position, null, Color.White, MathHelper.PiOver2, new Vector2(0, 0), 1, SpriteEffects.None, 0);
         }
     }
 }
