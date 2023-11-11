@@ -42,6 +42,8 @@ namespace GameProject0.Screens
 
         private float _shakeDuration;
 
+        CoinCube _coinCube;
+
         public GamePlayScreen(Game game)
         {
             _game = game;
@@ -71,6 +73,8 @@ namespace GameProject0.Screens
             _backgroundMusic = _content.Load<Song>("Portron Portron Lopez - Hiver Fou");
             MediaPlayer.IsRepeating = true;
             MediaPlayer.Play(_backgroundMusic);
+
+            _coinCube = new CoinCube(_game);
         }
 
         public override void Deactivate()
@@ -89,6 +93,7 @@ namespace GameProject0.Screens
             _stickSprite.Update(gameTime);
             _platformSprite.Update(gameTime, ScreenManager.GraphicsDevice);
             _boomerangSprite.Update(gameTime, ScreenManager.GraphicsDevice);
+            _coinCube.Update(gameTime);
             if (!_platformSprite.Bounds.CollidesWith(_stickSprite.Bounds))
             {
                 _stickSprite.FallUpdate(gameTime);
@@ -134,6 +139,7 @@ namespace GameProject0.Screens
             spriteBatch.DrawString(_bangers, "To Exit: Press The H Key!", new Vector2(520, 20), Color.Red);
             _swampSprite.Draw(gameTime, spriteBatch);
             _alligatorSprite.Draw(gameTime, spriteBatch);
+            _coinCube.Draw();
             spriteBatch.End();
         }
     }
