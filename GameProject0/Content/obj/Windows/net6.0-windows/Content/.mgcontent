@@ -14,15 +14,31 @@
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Bubble.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Character.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Cloud.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Controls.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/CorrectCloud.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Door.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Explosion.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Fire.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/GameOverScreen.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/GameOverScreen2.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LavaPit.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelOne.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelTwo.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Platform.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Portron Portron Lopez - Hiver Fou.mp3</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/StickJump.wav</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Swamp.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/varelaRound.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

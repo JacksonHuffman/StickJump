@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace GameProject0
+namespace GameProject0.SpriteClasses
 {
     public enum Direction
     {
@@ -79,7 +79,7 @@ namespace GameProject0
                 }
                 _animationTimer -= 0.1;
             }
-            
+
 
             _position += _velocity * (float)gameTime.ElapsedGameTime.TotalSeconds * 100;
 
@@ -91,15 +91,15 @@ namespace GameProject0
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            if(Direction == Direction.Right)
+            if (Direction == Direction.Right)
             {
                 spriteBatch.Draw(_textureRight, _position, Color.White);
             }
-            else if(Direction == Direction.Down)
+            else if (Direction == Direction.Down)
             {
                 spriteBatch.Draw(_textureDown, _position, Color.White);
             }
-            else if(Direction == Direction.Left)
+            else if (Direction == Direction.Left)
             {
                 spriteBatch.Draw(_textureLeft, _position, Color.White);
             }

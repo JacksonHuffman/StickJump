@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameProject0
+namespace GameProject0.HelperClasses
 {
     /// <summary>
     /// A static class providing helper methods for generating 

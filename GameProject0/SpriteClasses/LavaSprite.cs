@@ -8,9 +8,10 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using GameProject0.Collisions;
 
-namespace GameProject0
+
+namespace GameProject0.SpriteClasses
 {
-    public class SwampSprite
+    public class LavaSprite
     {
         private Vector2 _position;
 
@@ -20,15 +21,15 @@ namespace GameProject0
 
         public BoundingRectangle Bounds => _bounds;
 
-        public SwampSprite(Vector2 position)
+        public LavaSprite(Vector2 position)
         {
-            this._position = position;
-            this._bounds = new BoundingRectangle(_position, 1245, 175);
+            _position = position;
+            _bounds = new BoundingRectangle(_position, 1002, 428);
         }
 
         public void LoadContent(ContentManager content)
         {
-            _texture = content.Load<Texture2D>("Swamp");
+            _texture = content.Load<Texture2D>("LavaPit");
         }
 
         public void Draw(GameTime game, SpriteBatch spriteBatch)

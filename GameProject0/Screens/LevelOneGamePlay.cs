@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using Microsoft.Xna.Framework.Media;
 using GameProject0.ParticleSystemFolder;
 using System;
-using SharpDX.Direct3D11;
+using GameProject0.SpriteClasses;
 
 namespace GameProject0.Screens
 {
-    public class GamePlayScreen : GameScreen
+    public class LevelOneGamePlay : GameScreen
     {
         ContentManager _content;
 
@@ -44,7 +44,11 @@ namespace GameProject0.Screens
 
         CoinCube _coinCube;
 
-        public GamePlayScreen(Game game)
+        private TimeSpan _winnerTime;
+
+        private bool _lost = false;
+
+        public LevelOneGamePlay(Game game)
         {
             _game = game;
         }
@@ -55,7 +59,7 @@ namespace GameProject0.Screens
 
             _platformSprite = new PlatformSprite(new Vector2((ScreenManager.GraphicsDevice.Viewport.Width - 128) / 2, (ScreenManager.GraphicsDevice.Viewport.Height - 128) / 2), new Vector2((float)1, 0));
             _boomerangSprite = new BoomerangSprite(new Vector2(5, (ScreenManager.GraphicsDevice.Viewport.Height / 2) - 190), new Vector2((float)1, 0));
-            _stickSprite = new StickSprite(new Vector2((ScreenManager.GraphicsDevice.Viewport.Width - 64) / 2, (ScreenManager.GraphicsDevice.Viewport.Height - 335) / 2));
+            _stickSprite = new StickSprite(new Vector2((ScreenManager.GraphicsDevice.Viewport.Width - 64) / 2, (ScreenManager.GraphicsDevice.Viewport.Height - 335) / 2), 1);
             _swampSprite = new SwampSprite(new Vector2(0, 375));
             _alligatorSprite = new AlligatorSprite(new Vector2(300, 275), new Vector2(100, 0));
 
@@ -73,6 +77,7 @@ namespace GameProject0.Screens
             _backgroundMusic = _content.Load<Song>("Portron Portron Lopez - Hiver Fou");
             MediaPlayer.IsRepeating = true;
             MediaPlayer.Play(_backgroundMusic);
+            _winnerTime = TimeSpan.FromSeconds(30);
 
             _coinCube = new CoinCube(_game);
         }
@@ -87,6 +92,7 @@ namespace GameProject0.Screens
             base.Update(gameTime, otherScreenHasFocus, coveredByOtherScreen);
 
             _countdownTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+            _winnerTime -= gameTime.ElapsedGameTime;
 
             // TODO: Add your update logic here
             _alligatorSprite.Update(gameTime);
@@ -107,16 +113,25 @@ namespace GameProject0.Screens
 
             if (_stickSprite.Bounds.CollidesWith(_swampSprite.Bounds))
             {
+                _lost = true;
                 ScreenManager.AddScreen(new GameOverScreen(), null);
                 _bubbles.IsBubbling = false;
-                this.Deactivate();
+                MediaPlayer.Stop();
+                ExitScreen();
+            }
+
+            if(_winnerTime <= TimeSpan.Zero && !_lost)
+            {
+                ScreenManager.AddScreen(new LevelTwoTransition(_game), null);
+                _bubbles.IsBubbling = false;
+                MediaPlayer.Stop();
+                ExitScreen();
             }
         }
 
         public override void Draw(GameTime gameTime)
         {
             ScreenManager.GraphicsDevice.Clear(Color.Black);
-
             
             Matrix shake = Matrix.Identity;
             if(_loserShake)
@@ -126,16 +141,15 @@ namespace GameProject0.Screens
                 shake = translation;
             }
             
-
             var spriteBatch = ScreenManager.SpriteBatch;
 
             // TODO: Add your drawing code here
             spriteBatch.Begin(transformMatrix: shake);
-            spriteBatch.DrawString(_bangers, _countdownTimer.ToString(), new Vector2(200, 200), Color.Purple);
+            spriteBatch.DrawString(_bangers, _countdownTimer.ToString(), new Vector2(275, 250), Color.Purple);
             _platformSprite.Draw(gameTime, spriteBatch);
-            _boomerangSprite.Draw(gameTime, spriteBatch);
+            //_boomerangSprite.Draw(gameTime, spriteBatch);
             _stickSprite.Draw(gameTime, spriteBatch);
-            spriteBatch.DrawString(_bangers, "StickJump!", new Vector2(20, 20), Color.Orange);
+            spriteBatch.DrawString(_bangers, "StickJump! - LvL 1", new Vector2(20, 20), Color.Orange);
             spriteBatch.DrawString(_bangers, "To Exit: Press The H Key!", new Vector2(520, 20), Color.Red);
             _swampSprite.Draw(gameTime, spriteBatch);
             _alligatorSprite.Draw(gameTime, spriteBatch);

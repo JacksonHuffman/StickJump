@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Content;
 
-namespace GameProject0
+namespace GameProject0.SpriteClasses
 {
     public class AlligatorSprite
     {
@@ -23,8 +23,8 @@ namespace GameProject0
 
         public AlligatorSprite(Vector2 position, Vector2 velocity)
         {
-            this._position = position;
-            this._velocity = velocity;
+            _position = position;
+            _velocity = velocity;
         }
 
         public void LoadContent(ContentManager content)
@@ -44,7 +44,7 @@ namespace GameProject0
                 _timer -= 5.0;
             }
 
-            
+
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)

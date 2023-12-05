@@ -9,12 +9,12 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace GameProject0
+namespace GameProject0.SpriteClasses
 {
     public class PlatformSprite
     {
 
-        private Vector2 _position;
+        public Vector2 Position;
 
         private Vector2 _velocity;
 
@@ -27,9 +27,9 @@ namespace GameProject0
 
         public PlatformSprite(Vector2 position, Vector2 velocity)
         {
-            this._position = position;
+            Position = position;
             _velocity = velocity;
-            this._bounds = new BoundingRectangle(_position, 133, 35);
+            _bounds = new BoundingRectangle(Position, 99, 35);
         }
 
         public void LoadContent(ContentManager content)
@@ -39,19 +39,19 @@ namespace GameProject0
 
         public void Update(GameTime gameTime, GraphicsDevice graphics)
         {
-            _position += _velocity * (float)gameTime.ElapsedGameTime.TotalSeconds * 100;
+            Position += _velocity * (float)gameTime.ElapsedGameTime.TotalSeconds * 100;
 
-            if (_position.X < graphics.Viewport.X || _position.X + 128 > graphics.Viewport.Width)
+            if (Position.X < graphics.Viewport.X || Position.X + 128 > graphics.Viewport.Width)
             {
                 _velocity.X *= -1;
             }
-            _bounds.X = _position.X;
-            _bounds.Y = _position.Y;
+            _bounds.X = Position.X;
+            _bounds.Y = Position.Y;
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.White);
+            spriteBatch.Draw(_texture, Position, Color.White);
         }
     }
 }

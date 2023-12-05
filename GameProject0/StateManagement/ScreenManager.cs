@@ -59,6 +59,7 @@ namespace GameProject0.StateManagement
         protected override void LoadContent()
         {
             SpriteBatch = new SpriteBatch(GraphicsDevice);
+            Font = _content.Load<SpriteFont>("varelaRound");
 
             // Tell each of the screens to load thier content 
             foreach (var screen in _screens)

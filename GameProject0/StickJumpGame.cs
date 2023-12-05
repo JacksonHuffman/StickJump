@@ -40,7 +40,9 @@ namespace GameProject0
 
         public void AddInitialScreens()
         {
-            _screenManager.AddScreen(new GamePlayScreen(this), null);
+            _screenManager.AddScreen(new MainMenuScreen(this), null);
+            //_screenManager.AddScreen(new LevelOneGamePlay(this), null);
+            //_screenManager.AddScreen(new LevelTwoGamePlay(this), null);
         }
 
         protected override void LoadContent()
@@ -68,6 +70,7 @@ namespace GameProject0
 
         protected override void Draw(GameTime gameTime)
         {
+            GraphicsDevice.Clear(Color.Black);
             base.Draw(gameTime);
         }
     }

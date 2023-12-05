@@ -1,7 +1,6 @@
 ﻿using System;
-using GameProject0.StateManagement;
 
-namespace GameProject0
+namespace GameProject0.StateManagement
 {
     // Our game's implementation of IScreenFactory which can handle creating the screens
     public class ScreenFactory : IScreenFactory
