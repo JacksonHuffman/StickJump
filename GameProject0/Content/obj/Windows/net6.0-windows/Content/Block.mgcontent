@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Block.png</SourceFile>
-  <SourceTime>2023-09-01T20:31:15.0755091-05:00</SourceTime>
+  <SourceTime>2023-12-12T23:36:00.4750642-06:00</SourceTime>
   <DestFile>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/bin/Windows/Content/Block.xnb</DestFile>
-  <DestTime>2023-09-01T20:33:12.7682378-05:00</DestTime>
+  <DestTime>2023-12-12T23:36:05.9153713-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

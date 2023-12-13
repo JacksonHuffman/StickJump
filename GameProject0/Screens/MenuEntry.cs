@@ -68,7 +68,7 @@ namespace GameProject0.Screens
             // Draw text, centered on the middle of each line.
             var screenManager = screen.ScreenManager;
             var spriteBatch = screenManager.SpriteBatch;
-            var font = screenManager.Font;
+            var font = screenManager.EntriesFont;
 
             var origin = new Vector2(0, font.LineSpacing / 2);
 
@@ -76,7 +76,7 @@ namespace GameProject0.Screens
                 //origin, scale, SpriteEffects.None, 0);
             if (_text.Equals("Start"))
             {
-                spriteBatch.DrawString(font, _text, new Vector2(75, 150), Color.Green, 0, origin, scale, SpriteEffects.None, 0);
+                spriteBatch.DrawString(font, _text, new Vector2(325, 150), Color.Green, 0, origin, scale, SpriteEffects.None, 0);
             }
             else if(_text.Equals("Controls"))
             {
@@ -84,19 +84,19 @@ namespace GameProject0.Screens
             }
             else
             {
-                spriteBatch.DrawString(font, _text, new Vector2(600, 325), Color.Red, 0, origin, scale, SpriteEffects.None, 0);
+                spriteBatch.DrawString(font, _text, new Vector2(340, 325), Color.Red, 0, origin, scale, SpriteEffects.None, 0);
             }
         }
 
         public virtual int GetHeight(MenuScreen screen)
         {
-            return screen.ScreenManager.Font.LineSpacing;
+            return screen.ScreenManager.EntriesFont.LineSpacing;
         }
 
         
         public virtual int GetWidth(MenuScreen screen)
         {
-            return (int)screen.ScreenManager.Font.MeasureString(Text).X;
+            return (int)screen.ScreenManager.EntriesFont.MeasureString(Text).X;
         }
         
     }

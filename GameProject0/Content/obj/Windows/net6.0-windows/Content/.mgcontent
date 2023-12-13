@@ -14,23 +14,65 @@
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Bubble.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Character.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Cloud.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/CoinCollect.wav</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Controls.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/CorrectCloud.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/CorrectDagger.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/coveredByYourGrace.spritefont</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Dagger.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Door.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Explosion.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/ExplosionSound.wav</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/FallingDagger.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/FallingDaggerDown.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/FallingDaggerLeft.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/FallingDaggerRight.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Fire.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Frederic Lardon feat Laura Palmée - Dans le love.mp3</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/GameOverScreen.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/GameOverScreen2.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/HoliznaCC0 - Sky Fish.mp3</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Key.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/KeyPickup.wav</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LavaPit.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LeftCastle.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelFourPlatform.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelOne.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelThreeBackground.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelTwo.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LevelTwoBackground.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/LongPlatform.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/MainMenuBackground.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Platform.png</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Portal.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Portron Portron Lopez - Hiver Fou.mp3</File>
+    <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/RightCastle.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/StickJump.wav</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Swamp.png</File>
     <File>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/varelaRound.spritefont</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

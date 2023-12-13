@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using GameProject0.Screens;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -26,9 +27,14 @@ namespace GameProject0.StateManagement
         public SpriteBatch SpriteBatch { get; private set; }
 
         /// <summary>
-        /// A SpriteFont shared by all GameScreens
+        /// A SpriteFont used for Menu Entries
         /// </summary>
-        public SpriteFont Font { get; private set; }
+        public SpriteFont EntriesFont { get; private set; }
+
+        /// <summary>
+        /// A SpriteFont to be used for the title of the game
+        /// </summary>
+        public SpriteFont TitleFont { get; private set; }
 
         /// <summary>
         /// A blank texture that can be used by the screens.
@@ -59,7 +65,8 @@ namespace GameProject0.StateManagement
         protected override void LoadContent()
         {
             SpriteBatch = new SpriteBatch(GraphicsDevice);
-            Font = _content.Load<SpriteFont>("varelaRound");
+            EntriesFont = _content.Load<SpriteFont>("varelaRound");
+            TitleFont = _content.Load<SpriteFont>("coveredByYourGrace");
 
             // Tell each of the screens to load thier content 
             foreach (var screen in _screens)

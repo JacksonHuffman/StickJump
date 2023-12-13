@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/Frederic Lardon feat Laura Palmée - Dans le love.mp3</SourceFile>
+  <SourceTime>2023-12-13T02:22:29.2420837-06:00</SourceTime>
+  <DestFile>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/bin/Windows/Content/Frederic Lardon feat Laura Palmée - Dans le love.xnb</DestFile>
+  <DestTime>2023-12-13T02:37:54.5948037-06:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T06:44:56-05:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2022-07-26T06:44:56-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/huffm/source/repos/GameProject0/GameProject0/Content/bin/Windows/Content/Frederic Lardon feat Laura Palmée - Dans le love.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

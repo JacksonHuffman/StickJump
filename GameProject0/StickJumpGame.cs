@@ -18,6 +18,8 @@ namespace GameProject0
 
         private readonly ScreenManager _screenManager;
 
+        public int Lives = 2;
+
         public StickJumpGame()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -40,29 +42,37 @@ namespace GameProject0
 
         public void AddInitialScreens()
         {
-            _screenManager.AddScreen(new MainMenuScreen(this), null);
-            //_screenManager.AddScreen(new LevelOneGamePlay(this), null);
+            //_screenManager.AddScreen(new MainMenuBackgroundScreen(), null);
+            _screenManager.AddScreen(new MainMenuScreen(this, Lives), null);
+            //_screenManager.AddScreen(new WinnerScreen(this, Lives, 0), null);
+            //_screenManager.AddScreen(new LevelThreeTransition(this, Lives), null);
             //_screenManager.AddScreen(new LevelTwoGamePlay(this), null);
+            //_screenManager.AddScreen(new LevelThreeTransition(this), null);
+            //_screenManager.AddScreen(new ControlsAndObjectives(this, Lives), null);
         }
 
         protected override void LoadContent()
         {
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            //_spriteBatch = new SpriteBatch(GraphicsDevice);
         }
 
         protected override void Update(GameTime gameTime)
         {
+            
             priorKeyboardState = currentKeyboardState;
             currentKeyboardState = Keyboard.GetState();
 
+            /*
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            */
 
-            if (currentKeyboardState.IsKeyDown(Keys.H) &&
-                priorKeyboardState.IsKeyUp(Keys.H))
+            if (currentKeyboardState.IsKeyDown(Keys.Escape) &&
+                priorKeyboardState.IsKeyUp(Keys.Escape))
             {
                 this.Exit();
             }
+            
             
 
             base.Update(gameTime);

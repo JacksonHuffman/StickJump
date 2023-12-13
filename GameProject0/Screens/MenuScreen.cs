@@ -15,6 +15,8 @@ namespace GameProject0.Screens
         private int _selectedEntry;
         private readonly string _menuTitle;
 
+        private MainMenuBackgroundScreen _backgroundScreen = new MainMenuBackgroundScreen();
+
         private readonly InputAction _menuUp;
         private readonly InputAction _menuDown;
         private readonly InputAction _menuSelect;
@@ -38,7 +40,7 @@ namespace GameProject0.Screens
                 new[] { Keys.Down }, true);
             _menuSelect = new InputAction(
                 new[] { Buttons.A, Buttons.Start },
-                new[] { Keys.Enter, Keys.Space }, true);
+                new[] { Keys.Space }, true);
             _menuCancel = new InputAction(
                 new[] { Buttons.B, Buttons.Back },
                 new[] { Keys.Back, Keys.Escape }, true);
@@ -144,9 +146,12 @@ namespace GameProject0.Screens
 
             var graphics = ScreenManager.GraphicsDevice;
             var spriteBatch = ScreenManager.SpriteBatch;
-            var font = ScreenManager.Font;
+            var entriesFont = ScreenManager.EntriesFont;
+            var titleFont = ScreenManager.TitleFont;
 
             spriteBatch.Begin();
+
+            //_backgroundScreen.Draw(gameTime);
 
             for (int i = 0; i < _menuEntries.Count; i++)
             {
@@ -161,14 +166,20 @@ namespace GameProject0.Screens
             float transitionOffset = (float)Math.Pow(TransitionPosition, 2);
 
             // Draw the menu title centered on the screen
-            var titlePosition = new Vector2(graphics.Viewport.Width / 2, 80);
-            var titleOrigin = font.MeasureString(_menuTitle) / 2;
-            var titleColor = new Color(192, 192, 192) * TransitionAlpha;
+            var titlePosition = new Vector2((graphics.Viewport.Width / 2) + 15, 60);
+            var titleOrigin = entriesFont.MeasureString(_menuTitle) / 2;
+            //var titleColor = new Color(192, 192, 192) * TransitionAlpha;
             const float titleScale = 1.25f;
 
             titlePosition.Y -= transitionOffset * 100;
 
-            spriteBatch.DrawString(font, _menuTitle, titlePosition, titleColor,
+            spriteBatch.DrawString(titleFont, _menuTitle, titlePosition, Color.Coral,
+                0, titleOrigin, titleScale, SpriteEffects.None, 0);
+
+            spriteBatch.DrawString(titleFont, _menuTitle, titlePosition + new Vector2(3,3), Color.LightGreen,
+                0, titleOrigin, titleScale, SpriteEffects.None, 0);
+
+            spriteBatch.DrawString(titleFont, _menuTitle, titlePosition + new Vector2(6,6), Color.CornflowerBlue,
                 0, titleOrigin, titleScale, SpriteEffects.None, 0);
 
             spriteBatch.End();

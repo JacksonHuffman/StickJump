@@ -26,6 +26,9 @@ namespace GameProject0.SpriteClasses
 
         private int _level;
 
+        private double _updateTimer = 2.3;
+
+
         public BoundingRectangle Bounds => _bounds;
 
         private KeyboardState currentKeyboardState;
@@ -36,6 +39,21 @@ namespace GameProject0.SpriteClasses
             _position = position;
             _bounds = new BoundingRectangle(_position, 50, 100);
             _level = level;
+
+            /*
+            if(_level == 1)
+            {
+                _bounds = new BoundingRectangle(_position, 50, 100);
+            }
+            else if(_level == 2)
+            {
+                _bounds = new BoundingRectangle(_position, 50, 100);
+            }
+            else
+            {
+                 _bounds = new BoundingRectangle(_position + new Vector2(25, 20), 40, 80);
+            }
+            */
         }
 
         public void LoadContent(ContentManager content)
@@ -49,21 +67,43 @@ namespace GameProject0.SpriteClasses
             priorKeyboardState = currentKeyboardState;
             currentKeyboardState = Keyboard.GetState();
 
-            if (currentKeyboardState.IsKeyDown(Keys.Left) || currentKeyboardState.IsKeyDown(Keys.A))
-            {
-                _position += new Vector2(-5, 0);
-            }
-            if (currentKeyboardState.IsKeyDown(Keys.Right) || currentKeyboardState.IsKeyDown(Keys.D))
-            {
-                _position += new Vector2(5, 0);
-            }
-
             if(1 == _level)
             {
-                if (currentKeyboardState.IsKeyDown(Keys.Space) && priorKeyboardState.IsKeyUp(Keys.Space) || currentKeyboardState.IsKeyDown(Keys.Up) && priorKeyboardState.IsKeyUp(Keys.Up))
+
+                if (currentKeyboardState.IsKeyDown(Keys.Left) || currentKeyboardState.IsKeyDown(Keys.A))
                 {
-                    _position += new Vector2(0, -100);
-                    _stickJump.Play();
+                    _position += new Vector2(-5, 0);
+                }
+                if (currentKeyboardState.IsKeyDown(Keys.Right) || currentKeyboardState.IsKeyDown(Keys.D))
+                {
+                    _position += new Vector2(5, 0);
+                }
+            }
+            else if(2 == _level)
+            {
+                _updateTimer -= gameTime.ElapsedGameTime.TotalSeconds;
+
+                if(_updateTimer <= 0.0)
+                {
+                    if (currentKeyboardState.IsKeyDown(Keys.Left) || currentKeyboardState.IsKeyDown(Keys.A))
+                    {
+                        _position += new Vector2(-3, 0);
+                    }
+                    if (currentKeyboardState.IsKeyDown(Keys.Right) || currentKeyboardState.IsKeyDown(Keys.D))
+                    {
+                        _position += new Vector2(3, 0);
+                    }
+                }
+            }
+            else
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.Left) || currentKeyboardState.IsKeyDown(Keys.A))
+                {
+                    _position += new Vector2(-2, 0);
+                }
+                if (currentKeyboardState.IsKeyDown(Keys.Right) || currentKeyboardState.IsKeyDown(Keys.D))
+                {
+                    _position += new Vector2(2, 0);
                 }
             }
            
@@ -73,9 +113,29 @@ namespace GameProject0.SpriteClasses
 
         public void AllowedUpdate(GameTime gameTime)
         {
-            if (currentKeyboardState.IsKeyDown(Keys.Space) && priorKeyboardState.IsKeyUp(Keys.Space) || currentKeyboardState.IsKeyDown(Keys.Up) && priorKeyboardState.IsKeyUp(Keys.Up))
+            if(1 == _level)
             {
-                _position += new Vector2(0, -130);
+                if (currentKeyboardState.IsKeyDown(Keys.W) && priorKeyboardState.IsKeyUp(Keys.W) || currentKeyboardState.IsKeyDown(Keys.Up) && priorKeyboardState.IsKeyUp(Keys.Up))
+                {
+                    _position += new Vector2(0, -130);
+                    _stickJump.Play();
+                }
+            }
+            else if (2 == _level)
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.W) && priorKeyboardState.IsKeyUp(Keys.W) || currentKeyboardState.IsKeyDown(Keys.Up) && priorKeyboardState.IsKeyUp(Keys.Up))
+                {
+                    _position += new Vector2(0, -130);
+                    _stickJump.Play();
+                }
+            }
+            else
+            {
+                if (currentKeyboardState.IsKeyDown(Keys.W) && priorKeyboardState.IsKeyUp(Keys.W) || currentKeyboardState.IsKeyDown(Keys.Up) && priorKeyboardState.IsKeyUp(Keys.Up))
+                {
+                    _position += new Vector2(0, -100);
+                    _stickJump.Play();
+                }
             }
         }
 
@@ -97,13 +157,21 @@ namespace GameProject0.SpriteClasses
                 _velocity += acceleration * t;
                 _position += acceleration * t;
             }
+            else
+            {
+                float t = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                Vector2 acceleration = new Vector2(0, 150);
+
+                _velocity += acceleration * t;
+                _position += acceleration * t;
+            }
             
 
         }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _position, Color.Purple);
+            spriteBatch.Draw(_texture, _position, Color.LightSalmon);
         }
     }
 }

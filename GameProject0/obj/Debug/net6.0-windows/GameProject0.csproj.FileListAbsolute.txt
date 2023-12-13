@@ -14,14 +14,39 @@ C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\C
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Bubble.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Character.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Cloud.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Controls.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\CorrectCloud.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\CorrectDagger.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\coveredByYourGrace.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Dagger.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Door.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Explosion.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\ExplosionSound.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\FallingDagger.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\FallingDaggerDown.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\FallingDaggerLeft.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\FallingDaggerRight.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Fire.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\GameOverScreen.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\GameOverScreen2.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\HoliznaCC0 - Sky Fish.wma
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\HoliznaCC0 - Sky Fish.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LavaPit.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LeftCastle.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelFourPlatform.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelOne.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelThreeBackground.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelTwo.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelTwoBackground.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LongPlatform.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\MainMenuBackground.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Platform.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Portron Portron Lopez - Hiver Fou.wma
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Portron Portron Lopez - Hiver Fou.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\RightCastle.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\StickJump.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Swamp.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\varelaRound.xnb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\GameProject0.exe
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\GameProject0.deps.json
 C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\GameProject0.runtimeconfig.json
@@ -54,11 +79,9 @@ C:\Users\huffm\source\repos\GameProject0\GameProject0\obj\Debug\net6.0-windows\r
 C:\Users\huffm\source\repos\GameProject0\GameProject0\obj\Debug\net6.0-windows\GameProject0.pdb
 C:\Users\huffm\source\repos\GameProject0\GameProject0\obj\Debug\net6.0-windows\GameProject0.genruntimeconfig.cache
 C:\Users\huffm\source\repos\GameProject0\GameProject0\obj\Debug\net6.0-windows\ref\GameProject0.dll
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelOne.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\varelaRound.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LevelTwo.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\LavaPit.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Door.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Explosion.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\GameOverScreen2.xnb
-C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Controls.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Key.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Portal.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Frederic Lardon feat Laura Palmée - Dans le love.wma
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\Frederic Lardon feat Laura Palmée - Dans le love.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\KeyPickup.xnb
+C:\Users\huffm\source\repos\GameProject0\GameProject0\bin\Debug\net6.0-windows\Content\CoinCollect.xnb
